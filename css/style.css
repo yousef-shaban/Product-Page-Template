@@ -3,6 +3,9 @@
     --main-color: #2196f3;
     --main-color-alt: #1787e0;
     --main-transition: 0.5s;
+    --main-background-color: #ececec;
+    --main-padding-top: 30px;
+    --main-padding-bottom: 30px;
 }
 
 * {
@@ -390,13 +393,13 @@ a {
 .articles .box {
     overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px 2px #00000040;
+    box-shadow: 0px 4px 8px 2px #0000001f;
     position: relative;
     transition: transform var(--main-transition), box-shadow var(--main-transition);
 }
 .articles .box:hover {
     transform: translateY(-15px);
-    box-shadow: 0px 4px 8px 2px #00000083;
+    box-shadow: 0px 4px 8px 2px #0000003d;
 }
 .articles img {
     max-width: 100%;
@@ -447,6 +450,70 @@ a {
 }
 /* end articles */
 
+/* start gallery */
+.gallery
+{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--main-background-color);
+}
+.gallery .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 30px;
+}
+.gallery .box
+{
+    background-color: white;
+    padding: 15px;
+}
+.gallery .image
+{
+    position: relative;
+    overflow: hidden;
+}
+.gallery img
+{
+    max-width: 100%;
+    transition: transform var(--main-transition);
+}
+.gallery .image:hover img
+{
+    transform: rotate(5deg) scale(1.1);
+
+}
+.gallery .box .image::before
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background-color: rgb(255 2555 255 / 20%);
+    z-index: 3;
+    opacity: 0;
+}
+.gallery .box .image:hover::before
+{
+    animation: flashing 0.5s;
+}
+/* end gallery */
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* start animation */
 
 @keyframes top-bottom {
@@ -492,6 +559,20 @@ a {
     100%
     {
         transform: translateX(10px);
+    }
+}
+
+@keyframes flashing
+{
+    0%, 50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
     }
 }
 /* end animation */
