@@ -623,7 +623,7 @@ a {
 }
 .time .img-holder::before
 {
-    background-color: green;
+    background-color: rgb(0,150,136);
 
 }
 .passion .img-holder::before
