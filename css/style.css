@@ -83,36 +83,7 @@ a {
 
 }
 
-@keyframes left-move {
-    50% {
-        left: 0%;
-        left: 0%;
-        width: 15px;
-        height: 15px;
-    }
 
-    100% {
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border-radius: 0%;
-    }
-}
-
-@keyframes right-move {
-    50% {
-        right: 0%;
-        width: 15px;
-        height: 15px;
-    }
-
-    100% {
-        right: 0;
-        border-radius: 0%;
-        width: 100%;
-        height: 100%;
-    }
-}
 
 /* end main title */
 
@@ -171,7 +142,6 @@ a {
     color: var(--main-color);
 }
 
-.navbar .navlinks {}
 
 .navbar .navlinks>ul {
     display: flex;
@@ -271,7 +241,6 @@ a {
     width: 100%;
 }
 
-.mega-menu .links {}
 
 .mega-menu .links li {
     position: relative;
@@ -320,7 +289,7 @@ a {
     content: "";
     position: absolute;
     width: 142%;
-    height: 107%;
+    height: 97%;
     background-color: #eee;
     z-index: -1;
     transform: rotateZ(-8deg);
@@ -673,8 +642,104 @@ a {
 }
 /* end features */
 
+/* start testimonials */
+.testimonials
+{
+    padding-top: calc(var(--main-padding-top) + 10px);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: #ececec;
+}
+.testimonials .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 50px;
+}
+.testimonials .box
+{
+    position: relative;
+    background-color: white;
+}
+.testimonials .box .img-holder
+{
+    background-color: #ececec;
+    width: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: -10px;
+    top: -40px;
+
+}
+.testimonials .box .img-holder img
+{
+    width: 100%;
+    border-radius: 50%;
+
+}
+.testimonials .box h4
+{
+    padding: 10px 10px 0 10px;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+.testimonials .box .title
+{
+    padding: 10px 10px 0 10px;
+    margin: 0;
+    font-size: 12px;
+    color: #777;
+}
+.testimonials .box .rating
+{
+    padding: 10px;
+    color: gold;
+}
+
+.testimonials .box .commint
+{
+    margin-top: 0;
+    padding: 10px;
+    color: #444;
+    line-height: 1.7;
+}
+/* end testimonials */
 
 /* start animation */
+
+
+@keyframes left-move {
+    50% {
+        left: 0%;
+        left: 0%;
+        width: 15px;
+        height: 15px;
+    }
+
+    100% {
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+}
+
+@keyframes right-move {
+    50% {
+        right: 0%;
+        width: 15px;
+        height: 15px;
+    }
+
+    100% {
+        right: 0;
+        border-radius: 0%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
 
 @keyframes top-bottom {
 
