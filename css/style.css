@@ -550,8 +550,7 @@ a {
 }
 .features .box:hover .img-holder::after
 {
-    border-width: 0 480px 208px 0;
-
+    border-width: 0 541px 216px 0;
 }
 .features img
 {
