@@ -44,6 +44,7 @@ a {
     padding: 15px 30px;
     position: relative;
     transition: all var(--main-transition) ease-in-out;
+    z-index: 100;
 }
 
 .main-title:hover {
@@ -804,6 +805,126 @@ a {
 }
 
 /* end team members */
+
+/* start services */
+.services
+{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: #ececec;
+}
+.services .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 50px;
+}
+.services .box
+{
+    background-color: white;
+    box-shadow: 0px 6px 22px -16px #444;
+    position: relative;
+    transition: var(--main-transition);
+}
+.services .box:hover
+{
+    transform: translateY(-15px);
+    box-shadow: 0px 9px 23px -15px #444;
+}
+.services .box::before,.services .box::after 
+{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    height: 5px;
+    top: 0;
+    width: 0%;
+    transition: var(--main-transition);
+}
+.services .box::before
+{
+    
+    right: 50%;
+    
+
+}
+.services .box::after
+{
+    left: 50%;
+}
+.services .box:hover::before
+{
+    width: 50%;
+}
+.services .box:hover::after
+{
+    width: 50%;
+}
+.services .box .icon
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+.services .box .icon i
+{
+    font-size: 50px;
+    color: #aaa;
+}
+.services .box .icon h3
+{
+    font-size: 30px;
+    color: var(--main-color-alt);
+}
+.services .box .info
+{
+    direction: rtl;
+    overflow: hidden;
+    position: relative;
+    height: 35px;
+    background-color: #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.services .box .info::before
+{
+    content: "01";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 30px;
+    background-color: var(--main-color);
+    width: 30%;
+    direction: ltr;
+    font-weight: 900;
+    color: white;
+    padding-left: 15px;
+    z-index: 1;
+    height: 100%;
+}
+.services .box .info::after
+{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 30%;
+    width: 30px;
+    height: 100px;
+    background-color: #777;
+    z-index: 2;
+    transform: rotateZ(210deg);
+}
+.services .box .info a
+{
+    padding: 10px;
+    font-weight: bold;
+    color: var(--main-color-alt);
+    font-size: 18px;
+    
+}
+/* end services */
 
 /* start animation */
 @keyframes left-move {
