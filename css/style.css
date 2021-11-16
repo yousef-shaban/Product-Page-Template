@@ -938,7 +938,13 @@ a {
     justify-content: space-between;
     transition: var(--main-transition);
 }
-
+@media(max-width:767px)
+{
+    .skills .container
+    {
+        flex-direction: column;
+    }
+}
 .skills .bars
 {
     flex: 1;
@@ -1100,6 +1106,141 @@ a {
 }
 
 /* end how it works */
+
+/* start event */
+.event
+{
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+}
+.event .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media(max-width:767px)
+{
+    .event .container
+    {
+        flex-direction: column;
+    }
+    .event .container .info
+    {
+        width: 100%;
+    }
+
+}
+.event .image-holder
+{
+    width: 50%;
+}
+.event img
+{
+    max-width: 100%;
+}
+.event .info
+{
+    width: calc(50% - 10px);
+    margin-left: 10px;
+}
+.event .info .counter
+{
+    display: flex;
+    justify-content: center;
+}
+.event .info .counter ul
+{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.event ul li
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #999;
+    text-align: center;
+    border-radius: 5px;
+}
+.event ul li span
+{
+    width: 100%;
+    text-align: center;
+    padding: 7px 5px;    
+}
+.event ul li span:first-of-type
+{
+    border-bottom: 1px solid #999;
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--main-color);
+}
+
+.event ul li span:last-of-type
+{
+    font-size: 8px;
+}
+.event .description
+{
+    text-align: center;
+    margin-top: 40px;
+}
+.event .description h2
+{
+    color: #444;
+}
+.event .description p
+{
+    color: #777;
+}
+.event .sub
+{
+    width: fit-content;
+    margin: 0 auto;
+    background-color: #eee;
+    border-radius: 50px;
+}
+.event .content
+{
+    padding: 20px;
+}
+
+.event .sub input
+{
+    border-radius: 50px;
+    outline: 0px;
+    border: none;
+    padding: 15px 20px ;
+    width: 20em;
+}
+
+.event .sub button
+{
+    border-radius: 50px;
+    padding: 15px 25px;
+    background-color: var(--main-color);
+    outline: none;
+    color: white;
+    border: none;
+    margin-left: 20px;
+    font-size: 20px;
+}
+@media(max-width:767px)
+{
+    .event .sub .content
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .event .sub .content input
+    {
+        margin-bottom: 20px;
+    }
+}
+/* end event */
 
 /* start animation */
 @keyframes left-move {
