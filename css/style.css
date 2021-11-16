@@ -939,11 +939,6 @@ a {
     transition: var(--main-transition);
 }
 
-.skills img
-{
-
-}
-
 .skills .bars
 {
     flex: 1;
